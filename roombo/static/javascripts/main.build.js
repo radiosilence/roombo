@@ -1,0 +1,4 @@
+({
+    optimizeCss: "standard",
+    wrap: true,
+})
