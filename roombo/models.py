@@ -22,3 +22,9 @@ class Activity(models.Model):
 
 class Room(models.Model):
     name = models.CharField(max_length=255)
+    building = models.ForeignKey(Building, related_name='rooms')
+
+
+class Allocation(models.Model):
+    activity = models.ForeignKey(Activity, related_name='allocations')
+    room = models.ForeignKey(Room, related_name='allocations')
